@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>『3回で終わる男、続く男』公式案内</title>
+<!-- ★Klee Oneの「太字用（600）」のウェイトを確実に読み込み -->
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep: #16264c; 
+    --gold-bdr:  #d4b28c; 
+    --bg-light:  #fcfbfa; 
+    --text:      #111111; /* コントラストを最大にするため、さらに濃い漆黒へ変更 */
+    --muted:     #444444;
+    --bg:        #f2f4f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Klee One', 'YuMincho', 'Hiragino Mincho ProN', serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.9; 
+    letter-spacing: 0.05em; 
+    /* ★ここがポイント：全体の標準文字を、最初から「太字（太さ600）」に指定してくっきり化 */
+    font-weight: 600; 
+  }
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .main-card {
+    background: #ffffff;
+    border: 1px solid #e2e2da;
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 0 6px 20px rgba(22,38,76,0.04);
+  }
+
+  /* ===== タイトルエリア ===== */
+  .title-box {
+    text-align: center;
+    background-color: var(--bg-light);
+    border: 1px solid var(--gold-bdr);
+    outline: 4px solid var(--bg-light); 
+    box-shadow: 0 0 0 5px var(--gold-bdr); 
+    padding: 30px 20px;
+    margin-bottom: 45px;
+    border-radius: 2px; 
+    position: relative;
+  }
+  .main-title {
+    font-size: 24px;
+    font-weight: 600; 
+    color: var(--navy-deep);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .sub-title {
+    font-size: 15px;
+    color: #222222; /* よりくっきり見えるように濃く */
+    display: block;
+    border-top: 1px solid #e8e4df; 
+    padding-top: 12px;
+    margin-top: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ===== TEXT STYLES ===== */
+  p {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  /* ★全体が太くなったため、強調節マーク（bタグ）の部分は「背景マーカー」をやや濃くして引き立たせる */
+  b, strong {
+    font-weight: 600;
+    background: linear-gradient(transparent 65%, #f2dec9 0%); 
+    color: #000000; /* 強調部分は完全な純黒に */
+  }
+  .highlight-blue {
+    color: var(--navy-deep);
+    background: linear-gradient(transparent 70%, #dbe7f5 0%); /* 厳しい現実の部分に青いマーカー線 */
+  }
+
+  /* ===== BLOCKQUOTE ===== */
+  .quote-box {
+    background-color: #f7f4f0;
+    padding: 24px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    border-left: 5px solid var(--gold-bdr); /* 視線を引くために線を少し太く */
+    color: #2a221d;
+  }
+
+  /* ===== SUB HEADER ===== */
+  .sub-header {
+    font-size: 18px;
+    color: var(--navy-deep);
+    border-bottom: 2px solid var(--gold-bdr); /* アンダーラインを少し太くして強調 */
+    padding-bottom: 8px;
+    margin: 45px 0 24px;
+  }
+
+  /* ===== DASHED BOX ===== */
+  .dashed-box {
+    background-color: var(--bg-light);
+    border: 2px dashed var(--gold-bdr);
+    padding: 24px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+  }
+
+  /* ===== BUTTON ===== */
+  .btn-container {
+    text-align: center;
+    margin: 50px 0;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: var(--navy-deep);
+    color: #ffffff;
+    font-size: 18px; /* ボタンの文字を少し拡大 */
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(22,38,76,0.25);
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 520px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Klee One', sans-serif; 
+  }
+  .cta-button:hover {
+    background-color: #0d1833;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(22,38,76,0.35);
+  }
+  .btn-sub {
+    font-size: 11.5px;
+    font-weight: normal;
+    display: block;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 576px) {
+    .wrapper { padding: 20px 10px 40px; }
+    .main-card { padding: 30px 18px; }
+    .main-title { font-size: 20px; }
+    .sub-title { font-size: 13.5px; }
+    p { font-size: 15.5px; }
+    .cta-button { width: 100%; font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="main-card">
+
+    <!-- タイトルボックス -->
+    <div class="title-box">
+      <span class="main-title">📖 『3回で終わる男、続く男』</span>
+      <span class="sub-title">〜大人の女性は怒らない。ただ静かに去る〜</span>
+    </div>
+
+    <!-- 本文エリア -->
+    <p>☕ <b>やや</b>です。<br>リッチメニューをタップしていただき、ありがとうございます。</p>
+
+    <div class="quote-box">
+      「どれだけ良い雰囲気でスタートしても、なぜか3回目のデートが終わる頃には連絡が途絶えてしまう…」
+    </div>
+
+    <p>喧嘩をしたわけでも、嫌われるような大失敗をしたわけでもない。なのに、気づけば「また連絡するね」という乾いた一言を最後に、静かに自然消滅していく。👥💥</p>
+
+    <p>もしあなたにそんな経験があるなら、ここで<span class="highlight-blue">残酷なまでの厳しい現実</span>をお伝えしなければなりません。</p>
+
+    <p>自立した大人の女性は、男に対して感情を剥き出しにして怒ることはありません。🙅‍♀️<br>責めないし、不満や説教も一切口にしないのです。</p>
+
+    <p>彼女たちはデートのたび、あなたの見えないところで少しずつ脳内のスコアボードから<b>「減点」</b>を引き算しています。そしてある日ついに限界を超えたから、何も言わずに、ただ静かに去っていったのです。📉💔</p>
+
+    <!-- 小見出し -->
+    <h3 class="sub-header">⏳ 私はその答えに気づくまでに、20年を無駄にしました</h3>
+
+    <p>「相性が悪かっただけ」「縁やタイミングが合わなかったんだろう」<br>そうやって自分に都合のいい言い訳を続け、全く同じ失敗のループを20年以上も繰り返してきたのです。😔🔂</p>
+
+    <p>あなたには、私と同じ過ちを犯し、<b>男としての貴重な時間とエネルギーをドブに捨ててほしくない。</b></p>
+
+    <p>その強い思いだけで、私の20年分の遠回りと、血の滲むような失敗から得た<b>「答えのすべて」</b>を1冊のnoteに包み隠さず凝縮しました。✍️🔥</p>
+
+    <!-- 強調枠 -->
+    <div class="dashed-box">
+      <p style="margin: 0; font-weight: bold; color: #333333; line-height: 1.8;">
+        💡 <b>このnoteは、女性を騙すための安っぽい恋愛攻略本ではありません。</b><br>
+        大人の女性に信頼され、<span class="highlight-blue">40代・50代から本気で人生を回収するための「選ばれる男」の教科書</span>です。✨👑
+      </p>
+    </div>
+
+    <p style="text-align: center; font-weight: bold;">
+      私は女性が離れていく本当の理由を知るまでに20年かかりました。<br>
+      底知れぬ後悔を経て、あなたは<span style="color: #16264c; font-size: 17px; background: linear-gradient(transparent 60%, #f2e6da 0%); font-weight: bold;">【今日、この瞬間】</span>にそれを知ることができます。⚡💡
+    </p>
+
+    <p style="text-align: center; font-weight: 500;">
+      もう二度と、あの切ない自然消滅の苦しみを繰り返したくないなら、下の青いボタンをタップして、私の20年の結晶を受け取ってください。👇
+    </p>
+
+    <!-- タップ導線ボタン -->
+    <div class="btn-container">
+      <a href="https://note.com/deep_acacia8369/n/nf83206cef7f1" target="_blank" class="cta-button">
+        <span class="btn-sub">＼ここをタップすると公式noteが開きます／</span>
+        📖 本編の続きを今すぐ読む（2,980円）
+      </a>
+    </div>
+
+    <!-- フッター -->
+    <p style="text-align: center; color: var(--muted); font-weight: bold; margin: 0;">
+      あなたのご参加を、静かにお待ちしています。🤝☕
+    </p>
+
+  </div><!-- /main-card -->
+</div><!-- /wrapper -->
+
+</body>
+</html>
